@@ -48,14 +48,6 @@ Theme Header
 			<div class="appointment_holder">
 				<a href="#appoint-form" class="appt_btn modal-opener amatic"><span>Schedule</span><span>Your Appointment</span></a>
 			</div>
-			<div id="social-header">
-				<ul class="social-header-ul">
-					<li class="social-link"><a href="https://www.instagram.com/smilepediatrics/"><img src="<?php echo get_template_directory_uri(); ?>/images/02_Instagram.png"></a></li>
-					<li class="social-link"><a href="https://www.facebook.com/pages/Smile-Pediatrics/561078550695134"><img src="<?php echo get_template_directory_uri(); ?>/images/02_Facebook.png"></a></a></li>
-					<li class="social-link"><a href="https://plus.google.com/104176577894998909400/about"><img src="<?php echo get_template_directory_uri(); ?>/images/02_Google Plus.png"></a></a></li>
-					<li class="social-link"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/02_Youtube.png"></a></li>
-				</ul>
-			</div>
 		</div>
 	</nav>	
 </header>

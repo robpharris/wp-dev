@@ -6,7 +6,7 @@ function theme_scripts() {
 	$font_css2 = "https://fonts.googleapis.com/css?family=Amatic+SC";
 	$font_awesome = get_template_directory_uri() . "/css/font-awesome.min.css";
 	//$jquery = 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js';
-	$smilejs = get_template_directory_uri() . '/js/smile.js';
+	$smilejs = get_template_directory_uri() . '/js/theme_actions.js';
 	$bs_js = get_template_directory_uri() . '/js/bootstrap.min.js';
 	wp_enqueue_script('j-query',$jquery,array(),'3.3.1',true);
 	wp_enqueue_script('smilejs',$smilejs,array(),'1.0.0',true);
