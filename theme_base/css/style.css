@@ -1,0 +1,392 @@
+@charset "utf-8";
+/* CSS Document */
+body, html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 1.0em;
+}
+header {
+	width: 100%;
+	height: 175px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	border-bottom: 1px solid #e1f2f4;
+	background-color: #FFF;
+}
+.amatic {
+	font-family: "Amatic SC", sans-serif;
+}
+.logo {
+	display: inline-block;
+	height: 100%;
+	width: auto;
+	padding: 10px;
+	float: left;
+}
+.logo img {
+	display: block;
+	height: calc(100% - 30px);
+	width: auto;
+}
+.nav_holder {
+	float: left;
+	margin-top: 60px;
+	margin-left: 25px;
+}
+.nav_holder .main_nav {
+	font-family: "Amatic SC", sans-serif;
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+.nav_holder .main_nav li {
+	display: inline-block;
+	padding: 0;
+	font-size: 2.1em;
+	margin: 0 7px;
+}
+.nav_holder .main_nav li a {
+	color: #6e8397;
+	text-decoration: none;
+	display: block;
+	padding: 12px;
+	border-radius: 35px;
+	transition: all .4s linear;
+}
+.nav_holder .main_nav li a:hover {
+	background-color: #6e8397;
+	color: #FFF;
+}
+.nav_holder .main_nav li a.active {
+	background-color: #f25265;
+	color: #FFF;
+}
+.menu_show, .close_menu_btn {
+	display: none;
+}
+.main_nav li a:before {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	margin-right: 5px;
+}
+.main_nav li.home_link a:before {
+	content: "\f015";
+}
+.main_nav li.about_link a:before {
+	content: "\f29c";
+}
+.main_nav li.locations_link a:before {
+	content: "\f041";
+}
+.main_nav li.forms_link a:before {
+	content: "\f0f6";
+}
+.main_nav li.insurance_link a:before {
+	content: "\f132";
+}
+.main_nav li.videos_link a:before {
+	content: "\f108";
+}
+.main_nav li.referrals_link a:before {
+	content: "\f234";
+}
+.main_body {
+	width: 100%;
+	height: calc(100% - 175px);
+	margin-top: 175px;
+}
+.main_body .content {
+	width: 100%;
+	height: 100%;
+}
+.social {
+	position: absolute;
+	right: 21%;
+	top: 10px;
+}
+.contact {
+	float: right;
+	margin-right: 15px;
+	margin-top: 7px;
+	max-width: 20%;
+}
+button {
+	font-family: "Amatic SC", sans-serif;
+	font-size: 2.1em;
+	border-radius: 35px;
+	background-color: #FFF;
+	color: #274989;
+	border: 2px solid #274989;
+	padding: 10px;
+	cursor: pointer;
+	transition: .3s all linear;
+}
+button:hover, buton:active, button:focus, .open button {
+	background-color: #274989;
+	color: #FFF;
+}
+button .badge {
+	background-color: #274989;
+	color: #FFF;
+	border-radius: 19px;
+	padding: 3px 8px;
+	transition: .3s all linear;
+}
+button:hover .badge, button:active .badge, button:focus .badge, .open button .badge {
+	color: #274989;
+	background-color: #FFF;
+}
+.locations_contact {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	float: right;
+}
+.locations_contact li {
+	list-style: none;
+	position: relative;
+}
+.locations_contact li button {
+	position: relative;
+	z-index: 98;
+}
+.locations_contact li > ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0px;
+	color: #274989;
+	border: 2px solid #274989;
+	border-radius: 35px;
+	padding: 15px;
+	background-color: #FFF;
+	z-index: 99999;
+	min-width: 350px;
+	opacity: 0;
+	transition: .3s all linear;
+}
+.locations_contact li > ul li:not(:last-child):after{
+		display: block;
+		content: " ";
+		margin: 3px 0;
+		border-bottom: 1px solid #274989;
+	}
+.locations_contact li.open > ul {
+	display: block;
+	opacity: 1.0;
+}
+.locations_contact li > ul li {
+	font-size: 2.1em;
+}
+.locations_contact li > ul li a {
+	display: inline-block;
+	float: right;
+	vertical-align: middle;
+	text-decoration: none;
+	margin-right: 10px;
+	color: #274989;
+}
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	display: none;
+	top: 0;
+	left: 0;
+	opacity: .99;
+}
+.appointment_holder .appt_btn {
+	background-color: #45c4d7;
+	width: 180px;
+	margin: 5px 10px;
+	border-radius: 16px 16px 44px 44px;
+	float: right;
+	display: block;
+	text-decoration: none;
+	padding: 7px 0 10px 0;
+	transition: background-color .25s linear;
+}
+.appointment_holder .appt_btn:hover {
+	background-color: #274989;
+}
+.appointment_holder .appt_btn span {
+	color: #FFF;
+	font-size: 1.8em;
+	display: block;
+	text-align: center;
+	line-height: .9em;
+}
+.appointment_holder .appt_btn span:first-child {
+	color: #bad675;
+	font-size: 3.6em;
+	line-height: .7em;
+	margin-bottom: 4px;
+}
+
+@media screen and (max-width: 1615px) {
+	body {
+		font-size: .7em;
+	}
+	.logo img {
+		max-width: 175px;
+	}
+	header {
+		height: 150px;
+	}
+	.nav_holder .main_nav li {
+		margin: 0 3px;
+	}
+	.locations_contact li > ul li {
+		font-size: 2.8em;
+	}
+	.appointment_holder .appt_btn {
+		width: auto;
+		padding: 7px 15px 10px 15px;
+	}
+	.main_body {
+		margin-top: 150px;
+		heigth: calc(100% - 150px);
+	}
+}
+
+@media screen and (max-width: 1240px) {
+	.nav_holder {
+		margin: 0;
+		position: fixed;
+		width: 230px;
+		left: -250px;
+		top: 0px;
+		background-color: #FFF;
+		transition: all .3s linear;
+		padding: 45px 10px 10px 10px;
+		height: 100%;
+		z-index: 999;
+	}
+	.nav_holder.show_menu {
+		left: 0px;
+		box-shadow: 3px 3px 5px #45c4d7;
+	}
+	.nav_holder .main_nav {
+		display: block;
+		height: calc(100% - 60px);
+    	overflow-y: auto;
+	}
+	.nav_holder .main_nav li {
+		display: block;
+	}
+	.menu_show {
+		float: left;
+		margin: 45px 15px;
+		display: block;
+	}
+	.logo {
+		width: calc(100% - 270px);
+		margin: 0 10px;
+		padding: 10px 0px;
+	}
+	.logo img {
+		display: block;
+		margin: 0 auto;
+		width: 175px;
+	}
+	.close_menu_btn {
+		display: block;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		padding: 6px 8px;
+		line-height: .7em;
+	}
+	.menu_show{
+		padding: 5px 10px;
+	}
+}
+
+@media screen and (max-device-width: 740px) {
+	body {
+		font-size: 1.0em;
+	}
+	header {
+		height: 175px;
+	}
+	.logo {
+		width: calc(100% - 120px);
+		height: 175px;
+		margin: 0 auto;
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 60px;
+	}
+	.logo img{
+		width: auto;
+		height: 90%;
+		max-width: 310px;
+	}
+	.contact{
+		float: none;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		margin: 0;
+		max-width: 50%;
+	}
+	.locations_contact li > ul{
+		min-width: 300px;
+		left: 0;
+		right: initial;
+	}
+	.locations_contact li > ul li{
+		font-size: 1.9em;
+	}
+	.locations_contact li > ul li a{
+		margin-left: 15px;
+		margin-right: 0;
+	}
+	button{
+		font-size: 1.8em;
+	}
+	.appointment_holder .appt_btn span:first-child{
+		font-size: 3.0em;
+	}
+	.appointment_holder .appt_btn span{
+		font-size: 1.6em;
+	}
+	.nav_holder.show_menu{
+		width: 300px;
+		padding: 55px 10px 10px 10px;
+	}
+	.appointment_holder .appt_btn{
+		position: fixed;
+		left: 0px;
+		top: 175px;
+		margin: 0;
+		border-radius: 0;
+		width: 100%;
+		padding: 5px;
+	}
+	.locations_contact{
+		position: fixed;
+		left: 10px;
+		top: 65px;
+		z-index: 10;
+	}
+	.contact_btn span, .contact_btn .badge{
+		display: none;
+	}
+	.menu_show, .contact_btn{
+		padding: 4px 10px;
+	}
+	.menu_show{
+		margin: 10px 10px 0 10px;
+	}
+}
