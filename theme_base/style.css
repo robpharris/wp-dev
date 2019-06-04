@@ -190,6 +190,7 @@ input[type=text], textarea, input[type=email],input[type=tel]
 #appointment-form li textarea, textarea{
 	height: 230px;
 }
+
 .inner-page{
 	background-color: #BFF9F8;
 }
@@ -362,6 +363,7 @@ ul.nav.navbar-nav li ul li a:before{
 }
 /* End Dropbdown */
 
+
 button {
 	font-family: "Amatic SC", sans-serif;
 	font-size: 1.5em;
@@ -456,6 +458,7 @@ button:hover .badge, button:active .badge, button:focus .badge, .open button .ba
 	opacity: 1.00;
 	z-index: 9998;
 }
+
 .appt_close, .contact_close{
 	margin: 10px;
     padding: 3px 7px;
